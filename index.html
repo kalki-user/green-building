@@ -1,13 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>green</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNirmithi | Green Building Encyclopedia</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="#" class="nav-logo" data-target="home">
+                    <i data-lucide="leaf"></i>
+                    <span class="logo-text">EcoNirmithi</span>
+                </a>
+                
+                <div class="nav-links-desktop">
+                    <a href="#" class="nav-link active" data-target="home">Home</a>
+                    <a href="#" class="nav-link" data-target="materials">Materials</a>
+                    <a href="#" class="nav-link" data-target="techniques">Techniques</a>
+                    <a href="#" class="nav-link" data-target="calculator">Calculator</a>
+                    <a href="#" class="nav-link" data-target="quiz">Quiz</a>
+                </div>
+
+                <button class="mobile-toggle">
+                    <i data-lucide="menu" size="32"></i>
+                </button>
+
+                <div class="nav-links-mobile">
+                    <div class="mobile-menu-content">
+                        <a href="#" class="mobile-link active" data-target="home">Home</a>
+                        <a href="#" class="mobile-link" data-target="materials">Materials</a>
+                        <a href="#" class="mobile-link" data-target="techniques">Techniques</a>
+                        <a href="#" class="mobile-link" data-target="calculator">Calculator</a>
+                        <a href="#" class="mobile-link" data-target="quiz">Quiz</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- Home Page -->
+            <section id="home" class="edu-page active">
+                <section class="hero">
+                    <div class="container hero-container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                The Encyclopedia of <br />
+                                <span class="gradient-text">Sustainable Construction</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                A purely educational platform dedicated to cataloging the materials and construction techniques essential for green building and eco-friendly architecture.
+                            </p>
+                            <div class="hero-actions">
+                                <button class="btn btn-primary nav-link" data-target="materials">
+                                    Explore Materials <i data-lucide="book-open" style="margin-left: 8px;"></i>
+                                </button>
+                                <button class="btn btn-outline nav-link" style="background: white;" data-target="techniques">
+                                    Study Techniques <i data-lucide="layers" style="margin-left: 8px;"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hero-image-wrapper">
+                            <div class="hero-abstract-art glass" style="background-image: url('images/sustainable_green_home_1776703098915.png'); background-size: cover; background-position: center;">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="features-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>Explore the Database</h2>
+                            <p class="text-muted">Master the fundamentals of eco-friendly building without the noise.</p>
+                        </div>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="icon-wrapper bg-terracotta">
+                                    <i data-lucide="book-open" color="white"></i>
+                                </div>
+                                <h3>Raw Materials</h3>
+                                <p>Learn about naturally sourced, low net-carbon materials ranging from compacted earth and bamboo to recycled composites.</p>
+                                <a href="#" class="nav-link" data-target="materials" style="display: flex; align-items: center; gap: 5px; margin-top: 1rem; color: var(--color-secondary); font-weight: 600;">Browse Materials <i data-lucide="arrow-right"></i></a>
+                            </div>
+                            <div class="feature-card">
+                                <div class="icon-wrapper bg-green">
+                                    <i data-lucide="layers" color="white"></i>
+                                </div>
+                                <h3>Construction Techniques</h3>
+                                <p>Study the exact architectural layouts and physical construction methods such as filler slabs, rat-trap bonds, and arches.</p>
+                                <a href="#" class="nav-link" data-target="techniques" style="display: flex; align-items: center; gap: 5px; margin-top: 1rem; color: var(--color-primary); font-weight: 600;">Browse Techniques <i data-lucide="arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Materials Page -->
+            <section id="materials" class="edu-page">
+                <div class="edu-hero" style="background: linear-gradient(135deg, var(--color-secondary), #a85632)">
+                    <div class="container">
+                        <h1>Materials Directory</h1>
+                        <p>An exhaustive breakdown of low-carbon building materials.</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="materials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 3rem;">
+                        <!-- JS injected content -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Techniques Page -->
+            <section id="techniques" class="edu-page">
+                <div class="edu-hero gradient-bg">
+                    <div class="container">
+                        <h1>Techniques Directory</h1>
+                        <p>Vital methodologies used in sustainable building.</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="techniques-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 3rem;">
+                        <!-- JS injected content -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calculator Page -->
+            <section id="calculator" class="edu-page">
+                <div class="edu-hero" style="background: linear-gradient(135deg, #1a3a32, #2d3436)">
+                    <div class="container">
+                        <h1>Green Metrics</h1>
+                        <p>Calculate embodied carbon and water savings.</p>
+                    </div>
+                </div>
+                <div class="container" style="padding: 4rem 1rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                        <div class="glass-elite">
+                            <h2 style="margin-bottom: 2rem;"><i data-lucide="calculator"></i> Project Inputs</h2>
+                            <div style="display: grid; gap: 2rem;">
+                                <div>
+                                    <label style="display: block; margin-bottom: 10px; font-weight: 700; opacity: 0.6;">BUILT-UP AREA (SQ.FT)</label>
+                                    <input type="range" id="calc-area" min="100" max="10000" step="100" value="1000" style="width: 100%;">
+                                    <div id="calc-area-val" style="text-align: right; font-weight: 800; font-size: 1.5rem; color: var(--color-primary);">1000 sq.ft</div>
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 10px; font-weight: 700; opacity: 0.6;">PRIMARY MATERIAL</label>
+                                    <select id="calc-material" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--color-border);">
+                                        <option value="smb">Stabilized Mud Blocks (SMB)</option>
+                                        <option value="hempcrete">Hempcrete (Carbon Negative)</option>
+                                        <option value="rammed_earth">Rammed Earth</option>
+                                        <option value="clt">Cross-Laminated Timber (CLT)</option>
+                                        <option value="bamboo">Bamboo Construction</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-elite" style="background: rgba(0, 255, 136, 0.05);">
+                            <h3><i data-lucide="leaf"></i> Impact Savings</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                                <div>
+                                    <div style="opacity: 0.5; font-size: 0.8rem;">CARBON SAVED</div>
+                                    <div style="font-size: 1.8rem; font-weight: 800;"><span id="calc-carbon">0</span> kg</div>
+                                </div>
+                                <div>
+                                    <div style="opacity: 0.5; font-size: 0.8rem;">WATER SAVED</div>
+                                    <div style="font-size: 1.8rem; font-weight: 800;"><span id="calc-water">0</span> L</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Page -->
+            <section id="quiz" class="edu-page">
+                <div class="edu-hero" style="background: linear-gradient(135deg, #2d3436, #1a3a32)">
+                    <div class="container">
+                        <h1>Green Pro Quiz</h1>
+                        <p>Assess your knowledge of green building.</p>
+                    </div>
+                </div>
+                <div class="container" style="padding: 4rem 1rem;">
+                    <div id="quiz-question-container" class="glass-elite" style="max-width: 800px; margin: 0 auto; border-radius: 32px;">
+                        <!-- JS injected content -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h2>EcoNirmithi</h2>
+                        <p style="opacity: 0.7;">Empowering architects and builders with the knowledge to create a sustainable future.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Knowledge</h3>
+                        <ul>
+                            <li><a href="#" class="nav-link" data-target="materials">Materials</a></li>
+                            <li><a href="#" class="nav-link" data-target="techniques">Techniques</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Tools</h3>
+                        <ul>
+                            <li><a href="#" class="nav-link" data-target="calculator">Calculator</a></li>
+                            <li><a href="#" class="nav-link" data-target="quiz">Quiz</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; opacity: 0.5; font-size: 0.9rem;">
+                    &copy; 2026 EcoNirmithi Educational Portal. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+        <!-- ChatBot -->
+        <div class="chatbot-container">
+            <button class="chatbot-fab">
+                <i data-lucide="message-square"></i>
+            </button>
+            <div class="chatbot-window">
+                <div class="chatbot-header">
+                    <h3>Gaia</h3>
+                    <button class="close-btn"><i data-lucide="x"></i></button>
+                </div>
+                <div class="chat-messages">
+                    <div class="message bot">Welcome. I am Gaia, your green building companion. How can I assist you?</div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" placeholder="Ask Gaia...">
+                    <button class="send-btn"><i data-lucide="send"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>
